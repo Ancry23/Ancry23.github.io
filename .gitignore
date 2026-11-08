@@ -1,0 +1,6 @@
+# File generati dal sistema
+.DS_Store
+
+# Cache di Sass e dipendenze
+.sass-cache/
+node_modules/
