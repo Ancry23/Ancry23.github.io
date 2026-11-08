@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Andrei Cristian Moldovan | Sviluppatore Front-end</title>
+  <meta name="description" content="Sito personale di Andrei Cristian Moldovan: competenze, progetti e contatti.">
+
+  <!-- Open Graph e Twitter Card: come appare il sito quando viene condiviso -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Andrei Cristian Moldovan">
+  <meta property="og:title" content="Andrei Cristian Moldovan | Sviluppatore Front-end">
+  <meta property="og:description" content="Competenze, progetti e contatti di Andrei Cristian Moldovan.">
+  <meta property="og:url" content="https://ancry23.github.io/">
+  <meta property="og:image" content="https://ancry23.github.io/immagini/ACM_SocialAvatar_1024.png">
+  <meta property="og:image:alt" content="Logo ACM">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Framework front-end: Bootstrap, solo CSS (nessun JavaScript) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><img src="logo.svg" alt="Andrei Cristian Moldovan" height="28"></a>
+
+      <!-- Menu mobile senza JavaScript: checkbox nascosto + label -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label">Menu</label>
+
+      <nav class="site-nav">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="cv.html">CV</a>
+        <a href="contatti.html">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Dalla vendita al codice</p>
+        <h1>Andrei Cristian Moldovan</h1>
+        <p class="lead">
+          Sviluppatore web in formazione. Per oltre dieci anni ho lavorato a contatto con i clienti:
+          oggi costruisco interfacce web partendo da una domanda semplice, cioè capire il problema
+          di chi ho davanti.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-accent" href="contatti.html">Contattami</a>
+          <a class="btn btn-outline" href="cv.html">Leggi il CV</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2>Competenze</h2>
+      <!-- Layout con CSS Grid -->
+      <div class="cards">
+        <article class="card">
+          <h3>HTML5 e CSS3</h3>
+          <p>Usate nella landing page DnA: struttura semantica, form, layout con Flexbox e Grid, design responsive.</p>
+        </article>
+        <article class="card">
+          <h3>PHP, Laravel e MySQL</h3>
+          <p>Applicazioni web sviluppate durante un tirocinio nel 2017. Ora sto ripassando JavaScript.</p>
+        </article>
+        <article class="card">
+          <h3>Relazione con il cliente</h3>
+          <p>Ascolto, consulenza e fidelizzazione: anni di vendita sul campo, applicati allo sviluppo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2>Progetti</h2>
+      <!-- Layout con Flexbox -->
+      <div class="projects">
+        <article class="project">
+          <h3>PromiPay</h3>
+          <p>Web app per hostess e promoter, per gestire lavori e compensi. Nata dalla mia esperienza sul campo.</p>
+          <p class="small mb-0"><strong>Stack:</strong> Django, Django REST Framework, React, Vite.<br>
+            <strong>Stato:</strong> in sviluppo.</p>
+          <a href="https://github.com/Ancry23/PromiPay">Codice su GitHub</a>
+        </article>
+        <article class="project">
+          <h3>Landing page DnA</h3>
+          <p>Landing page realizzata durante il modulo HTML e CSS del corso start2impact.</p>
+          <p class="small mb-0"><strong>Stack:</strong> HTML, CSS.<br>
+            <strong>Stato:</strong> completata.</p>
+          <a href="https://github.com/Ancry23/dna-landing-page">Codice su GitHub</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy"><img src="logo.svg" alt="" height="20"> &copy; 2026 Andrei Cristian Moldovan</p>
+      <ul class="social">
+        <li><a href="https://github.com/Ancry23">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/andreicristianmoldovan">LinkedIn</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
