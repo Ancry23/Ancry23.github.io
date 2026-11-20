@@ -235,6 +235,14 @@ h2 {
   margin-top: auto;
   font-weight: 600;
 }
+.projects .project .project-preview {
+  aspect-ratio: 16/10;
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid #dde1e8;
+  border-radius: 6px;
+  order: -1;
+}
 
 .cv-section {
   margin-bottom: 2rem;

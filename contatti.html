@@ -39,7 +39,6 @@
     <h1>Contattami</h1>
     <p>Compila il modulo. Ti risponderò il prima possibile.</p>
 
-    <!-- Il form invia i dati a Formspree: l'action è l'indirizzo del form creato nella dashboard. -->
     <form class="contact-form" action="https://formspree.io/f/xjyyqbjj" method="POST">
       <div class="mb-3">
         <label class="form-label fw-semibold" for="nome">Nome e cognome</label>
@@ -66,7 +65,6 @@
         <textarea class="form-control" id="messaggio" name="messaggio" rows="5" minlength="10" required></textarea>
       </div>
 
-      <!-- Campo anti-spam: nascosto ai visitatori, i bot lo compilano e Formspree scarta il messaggio -->
       <div class="visually-hidden" aria-hidden="true">
         <label for="gotcha">Non compilare questo campo</label>
         <input id="gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
