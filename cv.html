@@ -21,21 +21,28 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#contenuto">Salta al contenuto</a>
 
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html"><img src="logo.svg" alt="Andrei Cristian Moldovan" height="28"></a>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
-      <label for="nav-toggle" class="nav-toggle-label">Menu</label>
-      <nav class="site-nav">
+      <nav class="site-nav site-nav-desktop" aria-label="Navigazione principale">
         <a href="index.html">Home</a>
         <a href="cv.html" aria-current="page">CV</a>
         <a href="contatti.html">Contatti</a>
       </nav>
+      <details class="site-menu">
+        <summary>Menu</summary>
+        <nav class="site-nav site-nav-mobile" aria-label="Navigazione principale">
+          <a href="index.html">Home</a>
+          <a href="cv.html" aria-current="page">CV</a>
+          <a href="contatti.html">Contatti</a>
+        </nav>
+      </details>
     </div>
   </header>
 
-  <main class="container section">
+  <main id="contenuto" class="container section">
     <h1>Curriculum vitae</h1>
 
     <section class="cv-section">

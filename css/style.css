@@ -17,6 +17,22 @@ main {
   flex: 1;
 }
 
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 200;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  color: #0F1117;
+  border-radius: 6px;
+  transform: translateY(-200%);
+  transition: transform 0.2s ease;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -77,27 +93,23 @@ h2 {
   height: 2rem;
   width: auto;
 }
-.site-header .nav-toggle-input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-  border: 0;
+.site-header .site-menu {
+  margin-left: auto;
 }
-.site-header .nav-toggle-label {
+.site-header .site-menu summary {
   cursor: pointer;
+  list-style: none;
   padding: 0.35rem 0.75rem;
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 6px;
 }
-.site-header .nav-toggle-input:checked ~ .nav-toggle-label {
+.site-header .site-menu summary::-webkit-details-marker {
+  display: none;
+}
+.site-header .site-menu[open] summary {
   background: rgba(255, 255, 255, 0.15);
 }
-.site-header .nav-toggle-input:focus-visible ~ .nav-toggle-label {
+.site-header .site-menu summary:focus-visible {
   outline: 3px solid #4D7CFE;
   outline-offset: 2px;
 }
@@ -117,17 +129,23 @@ h2 {
   font-weight: 700;
   color: #4D7CFE;
 }
-.site-header .nav-toggle-input:checked ~ .site-nav {
+.site-header .site-nav-desktop {
+  display: none;
+}
+.site-header .site-menu[open] .site-nav-mobile {
   display: flex;
 }
 @media (min-width: 768px) {
   .site-header .header-inner {
     flex-wrap: nowrap;
   }
-  .site-header .nav-toggle-label {
+  .site-header .site-menu summary {
+    display: block;
+  }
+  .site-header .site-menu {
     display: none;
   }
-  .site-header .site-nav {
+  .site-header .site-nav-desktop {
     display: flex;
     flex-direction: row;
     width: auto;
@@ -180,7 +198,7 @@ h2 {
 }
 
 .btn-accent {
-  background: #4D7CFE;
+  background: #315EDC;
   color: #fff;
 }
 .btn-accent:hover {

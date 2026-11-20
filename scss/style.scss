@@ -1,5 +1,6 @@
 $primary: #0F1117;
 $accent: #4D7CFE;
+$accent-contrast: #315EDC;
 $text: #222;
 $muted: #5b6573;
 $bg: #F5F7FA;
@@ -30,6 +31,23 @@ body {
 
 main {
   flex: 1;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 200;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  color: $primary;
+  border-radius: 6px;
+  transform: translateY(-200%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 img {
@@ -95,30 +113,27 @@ h2 {
     }
   }
 
-  .nav-toggle-input {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    white-space: nowrap;
-    border: 0;
+  .site-menu {
+    margin-left: auto;
   }
 
-  .nav-toggle-label {
+  .site-menu summary {
     cursor: pointer;
+    list-style: none;
     padding: 0.35rem 0.75rem;
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 6px;
   }
 
-  .nav-toggle-input:checked ~ .nav-toggle-label {
+  .site-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .site-menu[open] summary {
     background: rgba(255, 255, 255, 0.15);
   }
 
-  .nav-toggle-input:focus-visible ~ .nav-toggle-label {
+  .site-menu summary:focus-visible {
     outline: 3px solid $accent;
     outline-offset: 2px;
   }
@@ -142,7 +157,11 @@ h2 {
     }
   }
 
-  .nav-toggle-input:checked ~ .site-nav {
+  .site-nav-desktop {
+    display: none;
+  }
+
+  .site-menu[open] .site-nav-mobile {
     display: flex;
   }
 
@@ -151,11 +170,15 @@ h2 {
       flex-wrap: nowrap;
     }
 
-    .nav-toggle-label {
+    .site-menu summary {
+      display: block;
+    }
+
+    .site-menu {
       display: none;
     }
 
-    .site-nav {
+    .site-nav-desktop {
       display: flex;
       flex-direction: row;
       width: auto;
@@ -213,7 +236,7 @@ h2 {
 }
 
 .btn-accent {
-  background: $accent;
+  background: $accent-contrast;
   color: #fff;
 
   &:hover {

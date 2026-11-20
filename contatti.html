@@ -21,21 +21,28 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#contenuto">Salta al contenuto</a>
 
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html"><img src="logo.svg" alt="Andrei Cristian Moldovan" height="28"></a>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
-      <label for="nav-toggle" class="nav-toggle-label">Menu</label>
-      <nav class="site-nav">
+      <nav class="site-nav site-nav-desktop" aria-label="Navigazione principale">
         <a href="index.html">Home</a>
         <a href="cv.html">CV</a>
         <a href="contatti.html" aria-current="page">Contatti</a>
       </nav>
+      <details class="site-menu">
+        <summary>Menu</summary>
+        <nav class="site-nav site-nav-mobile" aria-label="Navigazione principale">
+          <a href="index.html">Home</a>
+          <a href="cv.html">CV</a>
+          <a href="contatti.html" aria-current="page">Contatti</a>
+        </nav>
+      </details>
     </div>
   </header>
 
-  <main class="container section">
+  <main id="contenuto" class="container section">
     <h1>Contattami</h1>
     <p>Compila il modulo. Ti risponderò il prima possibile.</p>
 
