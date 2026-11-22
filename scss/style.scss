@@ -1,6 +1,7 @@
 $primary: #0F1117;
 $accent: #4D7CFE;
 $accent-contrast: #315EDC;
+$accent-hero: #8AA9FF;
 $text: #222;
 $muted: #5b6573;
 $bg: #F5F7FA;
@@ -33,6 +34,10 @@ main {
   flex: 1;
 }
 
+#contenuto {
+  scroll-margin-top: 5rem;
+}
+
 .skip-link {
   position: fixed;
   top: 0.75rem;
@@ -60,12 +65,12 @@ a {
 }
 
 a:focus-visible,
-.btn:focus-visible {
+.site-button:focus-visible {
   outline: 3px solid $accent;
   outline-offset: 2px;
 }
 
-.container {
+.site-container {
   width: min(100% - 2rem, 1000px);
   margin-inline: auto;
 }
@@ -205,7 +210,7 @@ h2 {
 
   .eyebrow {
     margin: 0;
-    color: $accent;
+    color: $accent-hero;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-size: 0.85rem;
@@ -224,7 +229,7 @@ h2 {
   margin-top: 1.5rem;
 }
 
-.btn {
+.site-button {
   display: inline-block;
   padding: 0.6rem 1.25rem;
   border-radius: 999px;
@@ -235,7 +240,7 @@ h2 {
   font-size: 1rem;
 }
 
-.btn-accent {
+.site-button-accent {
   background: $accent-contrast;
   color: #fff;
 
@@ -244,7 +249,7 @@ h2 {
   }
 }
 
-.btn-outline {
+.site-button-outline {
   border-color: #fff;
   color: #fff;
 }
@@ -259,7 +264,7 @@ h2 {
   }
 }
 
-.card,
+.skill-card,
 .project {
   background: $surface;
   border-radius: $radius;
@@ -272,6 +277,26 @@ h2 {
   }
 
   p {
+    color: $muted;
+  }
+}
+
+.project-meta {
+  margin: 0;
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  dt {
+    color: $primary;
+    font-weight: 700;
+  }
+
+  dd {
+    margin: 0;
     color: $muted;
   }
 }
@@ -329,6 +354,7 @@ h2 {
 }
 
 .cv-date {
+  display: block;
   color: $muted;
   font-weight: 600;
   margin: 0;
@@ -374,7 +400,7 @@ h2 {
     border-color: $accent;
   }
 
-  .btn {
+  .site-button {
     justify-self: start;
   }
 }

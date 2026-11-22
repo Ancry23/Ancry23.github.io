@@ -17,6 +17,10 @@ main {
   flex: 1;
 }
 
+#contenuto {
+  scroll-margin-top: 5rem;
+}
+
 .skip-link {
   position: fixed;
   top: 0.75rem;
@@ -43,12 +47,12 @@ a {
 }
 
 a:focus-visible,
-.btn:focus-visible {
+.site-button:focus-visible {
   outline: 3px solid #4D7CFE;
   outline-offset: 2px;
 }
 
-.container {
+.site-container {
   width: min(100% - 2rem, 1000px);
   margin-inline: auto;
 }
@@ -169,7 +173,7 @@ h2 {
 }
 .hero .eyebrow {
   margin: 0;
-  color: #4D7CFE;
+  color: #8AA9FF;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.85rem;
@@ -186,7 +190,7 @@ h2 {
   margin-top: 1.5rem;
 }
 
-.btn {
+.site-button {
   display: inline-block;
   padding: 0.6rem 1.25rem;
   border-radius: 999px;
@@ -197,15 +201,15 @@ h2 {
   font-size: 1rem;
 }
 
-.btn-accent {
+.site-button-accent {
   background: #315EDC;
   color: #fff;
 }
-.btn-accent:hover {
+.site-button-accent:hover {
   filter: brightness(1.05);
 }
 
-.btn-outline {
+.site-button-outline {
   border-color: #fff;
   color: #fff;
 }
@@ -221,19 +225,36 @@ h2 {
   }
 }
 
-.card,
+.skill-card,
 .project {
   background: #fff;
   border-radius: 10px;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
-.card h3,
+
+.project-meta {
+  margin: 0;
+}
+.project-meta div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.project-meta dt {
+  color: #0F1117;
+  font-weight: 700;
+}
+.project-meta dd {
+  margin: 0;
+  color: #5b6573;
+}
+.skill-card h3,
 .project h3 {
   margin-top: 0;
   color: #0F1117;
 }
-.card p,
+.skill-card p,
 .project p {
   color: #5b6573;
 }
@@ -287,6 +308,7 @@ h2 {
 }
 
 .cv-date {
+  display: block;
   color: #5b6573;
   font-weight: 600;
   margin: 0;
@@ -328,7 +350,7 @@ h2 {
   background-color: #4D7CFE;
   border-color: #4D7CFE;
 }
-.contact-form .btn {
+  .contact-form .site-button {
   justify-self: start;
 }
 

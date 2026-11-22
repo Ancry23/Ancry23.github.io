@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Andrei Cristian Moldovan | Sviluppatore Front-end</title>
+  <title>Andrei Cristian Moldovan | Sviluppatore Front-end e Back-end</title>
   <meta name="description" content="Sito personale di Andrei Cristian Moldovan: competenze, progetti e contatti.">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Andrei Cristian Moldovan">
-  <meta property="og:title" content="Andrei Cristian Moldovan | Sviluppatore Front-end">
+  <meta property="og:title" content="Andrei Cristian Moldovan | Sviluppatore Front-end e Back-end">
   <meta property="og:description" content="Competenze, progetti e contatti di Andrei Cristian Moldovan.">
   <meta property="og:url" content="https://ancry23.github.io/">
   <meta property="og:image" content="https://ancry23.github.io/immagini/ACM_SocialAvatar_1024.png">
@@ -26,7 +26,7 @@
 
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="index.html"><img src="logo.svg" alt="Andrei Cristian Moldovan" height="28"></a>
+      <a class="brand" href="index.html"><img src="logo.svg" alt="Andrei Cristian Moldovan" width="92" height="32"></a>
 
       <nav class="site-nav site-nav-desktop" aria-label="Navigazione principale">
         <a href="index.html" aria-current="page">Home</a>
@@ -46,7 +46,7 @@
 
   <main id="contenuto">
     <section class="hero">
-      <div class="container">
+      <div class="site-container">
         <p class="eyebrow">Dalla vendita al codice</p>
         <h1>Andrei Cristian Moldovan</h1>
         <p class="lead">
@@ -55,55 +55,61 @@
           di chi ho davanti.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-accent" href="contatti.html">Contattami</a>
-          <a class="btn btn-outline" href="cv.html">Leggi il CV</a>
+          <a class="site-button site-button-accent" href="contatti.html">Contattami</a>
+          <a class="site-button site-button-outline" href="cv.html">Leggi il CV</a>
         </div>
       </div>
     </section>
 
-    <section class="container section">
+    <section class="site-container section">
       <h2>Competenze</h2>
       <div class="cards">
-        <article class="card">
+        <article class="skill-card">
           <h3>HTML5 e CSS3</h3>
           <p>Usate nella landing page DnA: struttura semantica, form, layout con Flexbox e Grid, design responsive.</p>
         </article>
-        <article class="card">
+        <article class="skill-card">
           <h3>PHP, Laravel e MySQL</h3>
           <p>Applicazioni web sviluppate durante un tirocinio nel 2017. Ora sto ripassando JavaScript.</p>
         </article>
-        <article class="card">
+        <article class="skill-card">
           <h3>Relazione con il cliente</h3>
           <p>Ascolto, consulenza e fidelizzazione: anni di vendita sul campo, applicati allo sviluppo.</p>
         </article>
       </div>
     </section>
 
-    <section class="container section">
+    <section class="site-container section">
       <h2>Progetti</h2>
       <div class="projects">
         <article class="project">
-          <img class="project-preview" src="immagini/promipay-preview.png" alt="Anteprima visiva della dashboard di PromiPay con riepilogo di compensi e pagamenti">
+          <img class="project-preview" src="immagini/promipay-preview.webp" alt="Anteprima visiva della dashboard di PromiPay con riepilogo di compensi e pagamenti" width="1586" height="992" loading="lazy" decoding="async">
           <h3>PromiPay</h3>
           <p>Web app per hostess e promoter, per gestire lavori e compensi. Nata dalla mia esperienza sul campo.</p>
-          <p class="small mb-0"><strong>Stack:</strong> Django, Django REST Framework, React, Vite.<br>
-            <strong>Stato:</strong> in sviluppo.</p>
+          <dl class="project-meta">
+            <div><dt>Stack</dt><dd>Django, Django REST Framework, React, Vite</dd></div>
+            <div><dt>Stato</dt><dd>In sviluppo</dd></div>
+          </dl>
           <a href="https://github.com/Ancry23/PromiPay">Codice su GitHub</a>
         </article>
         <article class="project">
-          <img class="project-preview" src="immagini/dna-preview.png" alt="Anteprima visiva della landing page DnA dedicata alla divulgazione scientifica">
+          <img class="project-preview" src="immagini/dna-preview.webp" alt="Anteprima visiva della landing page DnA dedicata alla divulgazione scientifica" width="1440" height="1100" loading="lazy" decoding="async">
           <h3>Landing page DnA</h3>
           <p>Landing page realizzata durante il modulo HTML e CSS del corso start2impact.</p>
-          <p class="small mb-0"><strong>Stack:</strong> HTML, CSS.<br>
-            <strong>Stato:</strong> completata.</p>
+          <dl class="project-meta">
+            <div><dt>Stack</dt><dd>HTML, CSS</dd></div>
+            <div><dt>Stato</dt><dd>Completata</dd></div>
+          </dl>
           <a href="https://github.com/Ancry23/dna-landing-page">Codice su GitHub</a>
         </article>
         <article class="project">
-          <img class="project-preview" src="immagini/sara-mancini-preview.png" alt="Anteprima reale della homepage del sito personale di Sara Mancini">
+          <img class="project-preview" src="immagini/sara-mancini-preview.webp" alt="Anteprima reale della homepage del sito personale di Sara Mancini" width="1440" height="1100" loading="lazy" decoding="async">
           <h3>Sito personale di Sara Mancini</h3>
           <p>Sito personale in lavorazione per mia moglie. Lo sto sviluppando anche come progetto di studio per approfondire un flusso di lavoro moderno.</p>
-          <p class="small mb-0"><strong>Stack:</strong> Astro 7.<br>
-            <strong>Stato:</strong> in lavorazione; al completamento sarà pubblicato con un dominio dedicato.</p>
+          <dl class="project-meta">
+            <div><dt>Stack</dt><dd>Astro 7</dd></div>
+            <div><dt>Stato</dt><dd>In lavorazione; al completamento sarà pubblicato con un dominio dedicato.</dd></div>
+          </dl>
           <a href="https://sara-mancini-sito.andreicristianmoldovan.workers.dev" target="_blank" rel="noopener noreferrer">Visita la demo</a>
         </article>
       </div>
@@ -111,8 +117,8 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p class="footer-copy"><img src="logo.svg" alt="" height="20"> &copy; 2026 Andrei Cristian Moldovan</p>
+    <div class="site-container footer-inner">
+      <p class="footer-copy"><img src="logo.svg" alt="" width="57" height="20"> &copy; 2026 Andrei Cristian Moldovan</p>
       <ul class="social">
         <li><a href="https://github.com/Ancry23">GitHub</a></li>
         <li><a href="https://www.linkedin.com/in/andreicristianmoldovan">LinkedIn</a></li>
